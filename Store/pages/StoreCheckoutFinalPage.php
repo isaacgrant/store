@@ -62,8 +62,8 @@ abstract class StoreCheckoutFinalPage extends StoreCheckoutPage
 	public function build()
 	{
 		parent::build();
-		$this->resetProgress();
-		$this->logoutSession();
+//		$this->resetProgress();
+//		$this->logoutSession();
 	}
 
 	// }}}

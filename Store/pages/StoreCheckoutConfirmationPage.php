@@ -681,8 +681,8 @@ class StoreCheckoutConfirmationPage extends StoreCheckoutPage
 			return;
 
 		$this->sendConfirmationEmail();
-		$this->removeCartEntries();
-		$this->cleanupSession();
+//		$this->removeCartEntries();
+//		$this->cleanupSession();
 		$this->updateProgress();
 
 		$this->app->relocate($this->getThankYouSource());
