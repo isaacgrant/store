@@ -5,47 +5,47 @@
 	<widget class="SwatFrame" id="edit_frame">
 		<property name="title">Address for</property>
 		<widget class="SwatForm" id="edit_form">
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="fullname_field">
 				<property name="title" translatable="yes">First Name &amp; Last Name</property>
 				<widget class="SwatEntry" id="fullname">
 					<property name="required" type="boolean">true</property>
 					<property name="maxlength" type="integer">255</property>
 				</widget>
 			</widget>
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="phone_field">
 				<property name="title" translatable="yes">Phone</property>
 				<widget class="SwatEntry" id="phone">
 					<property name="maxlength" type="integer">100</property>
 				</widget>
 			</widget>
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="line1_field">
 				<property name="title" translatable="yes">Line 1</property>
 				<widget class="SwatEntry" id="line1">
 					<property name="required" type="boolean">true</property>
 					<property name="maxlength" type="integer">255</property>
 				</widget>
 			</widget>
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="line2_field">
 				<property name="title" translatable="yes">Line 2</property>
 				<widget class="SwatEntry" id="line2">
 					<property name="maxlength" type="integer">255</property>
 				</widget>
 			</widget>
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="city_field">
 				<property name="title" translatable="yes">City</property>
 				<widget class="SwatEntry" id="city">
 					<property name="required" type="boolean">true</property>
 					<property name="maxlength" type="integer">255</property>
 				</widget>
 			</widget>
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="company_field">
 				<property name="title" translatable="yes">Company</property>
 				<widget class="SwatEntry" id="company">
 					<property name="required" type="boolean">true</property>
 					<property name="maxlength" type="integer">255</property>
 				</widget>
 			</widget>
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="provstate_field">
 				<property name="title" translatable="yes">Province / State</property>
 				<widget class="SwatFlydown" id="provstate">
 					<property name="required" type="boolean">true</property>
@@ -56,7 +56,7 @@
 					<property name="size" type="integer">35</property>
 				</widget>
 			</widget>
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="postal_code_field">
 				<property name="title" translatable="yes">Postal Code / ZIP Code</property>
 				<widget class="StorePostalCodeEntry" id="postal_code">
 					<property name="required" type="boolean">true</property>
@@ -64,20 +64,20 @@
 					<property name="maxlength" type="integer">50</property>
 				</widget>
 			</widget>
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="country_field">
 				<property name="title" translatable="yes">Country</property>
 				<widget class="SwatFlydown" id="country">
 					<property name="required" type="boolean">true</property>
 					<property name="show_blank" type="boolean">true</property>
 				</widget>
 			</widget>
-			<widget class="SwatFieldset">
+			<widget class="SwatFieldset" id="address_defaults">
 				<property name="title">Address Defaults</property>
-				<widget class="SwatFormField">
+				<widget class="SwatFormField" id="default_billing_address_field">
 					<property name="title" translatable="yes">Make this address the default billing address</property>
 					<widget class="SwatCheckbox" id="default_billing_address" />
 				</widget>
-				<widget class="SwatFormField">
+				<widget class="SwatFormField" id="default_shipping_address_field">
 					<property name="title" translatable="yes">Make this address the default shipping address</property>
 					<widget class="SwatCheckbox" id="default_shipping_address" />
 				</widget>

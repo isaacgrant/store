@@ -5,24 +5,24 @@
 	<widget class="SwatFrame" id="edit_frame">
 		<property name="title" translatable="yes">Payment Method for</property>
 		<widget class="SwatForm" id="edit_form">
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="payment_type_field">
 				<property name="title" translatable="yes">Payment Type</property>
 				<widget class="SwatFlydown" id="payment_type">
 					<property name="required" type="boolean">true</property>
 				</widget>
 			</widget>
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="card_fullname_field">
 				<property name="title" translatable="yes">Name on Card</property>
 				<widget class="SwatEntry" id="card_fullname">
 					<property name="required" type="boolean">true</property>
 					<property name="maxlength" type="integer">255</property>
 				</widget>
 			</widget>
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="card_number_preview_field">
 				<property name="title" translatable="yes">Card Number</property>
 				<widget class="SwatContentBlock" id="card_number_preview" />
 			</widget>
-			<widget class="SwatFormField">
+			<widget class="SwatFormField" id="card_expiry_field">
 				<property name="title" translatable="yes">Expiration Date</property>
 				<widget class="SwatDateEntry" id="card_expiry">
 					<property name="required" type="boolean">true</property>
