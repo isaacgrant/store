@@ -11,17 +11,12 @@ require_once 'Swat/SwatYUI.php';
  * Admin page for adding and editing addresses stored on accounts
  *
  * @package   Store
- * @copyright 2006-2011 silverorange
+ * @copyright 2006-2013 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class StoreAccountAddressEdit extends AdminDBEdit
 {
 	// {{{ protected properties
-
-	/**
-	 * var string
-	 */
-	protected $ui_xml = 'Store/admin/components/Account/addressedit.xml';
 
 	/**
 	 * @var array
@@ -44,6 +39,14 @@ class StoreAccountAddressEdit extends AdminDBEdit
 	// }}}
 
 	// init phase
+	// {{{ protected function getUiXml()
+
+	protected function getUiXml()
+	{
+		return 'Store/admin/components/Account/address-edit.xml';
+	}
+
+	// }}}
 	// {{{ protected function initInternal()
 
 	protected function initInternal()
@@ -51,7 +54,7 @@ class StoreAccountAddressEdit extends AdminDBEdit
 		parent::initInternal();
 
 		$this->ui->mapClassPrefixToPath('Store', 'Store');
-		$this->ui->loadFromXML($this->ui_xml);
+		$this->ui->loadFromXML($this->getUiXml());
 
 		$this->initAccount();
 		$this->initDefaultAddressFields();
