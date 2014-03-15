@@ -51,6 +51,7 @@ abstract class StoreCheckoutPage extends SiteUiPage
 		$this->initDataObjects();
 		$this->checkProgress();
 
+/*
 		// If the order has been saved then the checkout process is complete.
 		// If the user isn't on the thank you page then relocate there now.
 		// This prevents duplicate orders when the confirmation page is
@@ -65,6 +66,7 @@ abstract class StoreCheckoutPage extends SiteUiPage
 			$this->app->checkout->setProgress($this->getConfirmationSource());
 			$this->app->relocate($thank_you_source);
 		}
+*/
 
 		SitePageDecorator::init();
 
