@@ -51,6 +51,13 @@ abstract class StoreCheckoutPage extends SiteUiPage
 		$this->initDataObjects();
 		$this->checkProgress();
 
+// Hack to reset any saved order.
+if ($this->app->session->order->id !== null) {
+	$this->app->session->order->id = null;
+	if ($this->app->session->order->surcharge_total === null) {
+		$this->app->session->order->surcharge_total = 0;
+	}
+}
 /*
 		// If the order has been saved then the checkout process is complete.
 		// If the user isn't on the thank you page then relocate there now.
